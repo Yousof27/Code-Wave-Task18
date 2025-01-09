@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="all.min.css">
+    <title>Day11-JS Task</title>
+</head>
+
+<body>
+
+    <header>
+        <div class="container">
+            <p class="logo">Day 11 JS Task</p>
+        </div>
+    </header>
+
+    <main>
+        <div class="container">
+            <h2 class="main-title" id="main-title">Students grads</h2>
+            <form class="add">
+                <input type="text" class="name" placeholder="Enter Name:">
+                <p class="alert">Enter Student Name</p>
+                <input type="text" class="grade" placeholder="Enter Grade:">
+                <p class="alert">Enter Valid Grade, (A, B, C, D, F)</p>
+                <div class="btns-con">
+                    <div class="add">
+                        <input type="submit" value="Add">
+                    </div>
+                    <div class="edit">
+                        <button type="button" class="update" onclick="update()"><i class="fa-solid fa-pen"></i>
+                            Update</button>
+                        <button type="button" class="close" onclick="closeEdit()"><i class="fa-solid fa-xmark"></i>
+                            Close</button>
+                    </div>
+                </div>
+            </form>
+
+            <div class="search">
+                <div class="search-inner">
+                    <button class="icon" onclick="searchButton(this)">
+                        <i class="fa-solid fa-magnifying-glass"></i>
+                    </button>
+                    <div class="search-field">
+                        <input type="text" class="search" placeholder="Enter name:" oninput="handleTyping(this)">
+                        <label><input type="radio" name="search" data-type="name" checked onclick="radioButtonHandle(this)"> Name</label>
+                        <label><input type="radio" name="search" data-type="grade" onclick="radioButtonHandle(this)"> Grade</label>
+                    </div>
+                </div>
+            </div>
+
+            <div class="table-con">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Name</th>
+                            <th>Grade</th>
+                            <th>Action</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </main>
+
+    <script src="main.js"></script>
+</body>
+
+</html>
